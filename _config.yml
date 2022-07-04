@@ -1,18 +1,26 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
+name: "TOP Squad"
+title: "TOP Squad Blog"
+description: "Uitlaatklep voor alle Toppers van TOP Squad."
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /
-google_analytics: 'UA-46278016-1'
-disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+#google_analytics: 'UA-46278016-1'
+#disqus: 'demowebsite'
+#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
 
 # Authors
 authors:
+  sander.dahlberg:
+    name: Sander Dahlberg
+    display_name: Sander Dahlberg
+    gravatar: 15b8430273ba063edbada7ffc1cfc08f
+    email: sander.dahlberg@top-squad.nl
+    web: https://top-squad.nl
+    description: ""
+
   sal:
     name: Sal
     display_name: Sal
