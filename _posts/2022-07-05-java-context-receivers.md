@@ -32,7 +32,7 @@ begin
     ...
   end;
 ```
-[https://smartpascal.github.io/help/assets/with.htm](bron)
+[https://smartpascal.github.io/help/assets/with.htm](https://smartpascal.github.io/help/assets/with.htm)
 
 
 De Kotlin syntax is in de basis het zelfde:
@@ -43,7 +43,7 @@ with(loggingContext) {
         ...
 }
 ```
-[https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/]()
+[https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/](https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/)
 
 Ik geloof dat onder water pascal meer op _javascript_ lijkt in het opzoeken van variabelen in verschillende contexten, dan _kotlin_ of _java_, maar dit concept en het keyword zijn dezelfde. Je creëert een context waarbinnen een object instantie (tijdelijk) de nieuwe `this` wordt. 
 
@@ -57,7 +57,7 @@ new ArrayList<Integer>() { {
    add(2);
 } };
 ```
-[https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java](stackoverflow)
+[https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java](https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java)
 
  
 `Double curly brace initialization` (waarom heb ik dit nooit eerder gezien?) is een combinatie van twee enkelvoudige curly braces ...doh!... accolades in goed Nederlands!
