@@ -53,7 +53,7 @@ Maar daar gaat deze post niet over. In java bestaan er geen context receivers, d
 Totdat ik toevallig hier tegenaan liep:
 
 ```java
-new ArrayList<Integer>() {{
+new ArrayList<Integer>() { {
    add(1);
    add(2);
 }};
@@ -66,7 +66,6 @@ new ArrayList<Integer>() {{
 `Double curly brace initialization` (waarom heb ik dit nooit eerder gezien?) is een combinatie van twee enkelvoudige curly braces ...doh!... Accolades in goed Nederlands!
 
 1. één voor een anonymous inner class
-
 2. één voor een initializer block
 
  
@@ -74,7 +73,6 @@ new ArrayList<Integer>() {{
 En afgezien van het geringe 'side-effect' dat je een subclass instantieert in plaats van het type zelf, zijn er voor zover ik kan bedenken geen nadelen voor deze werkwijze. Het zorgt er natuurlijk wel voor dat je het niet op `final` classes kan toepassen.
 
  
-
 Dus, neem deze code (realistisch voorbeeld uit een spring `Configuration` class):
 
  
@@ -95,7 +93,7 @@ Dat kún je dus veranderen in dit:
 
 ```java
 @Bean
-public ThreadPoolTaskScheduler threadPoolTaskScheduler() {{
+public ThreadPoolTaskScheduler threadPoolTaskScheduler() { {
     return new ThreadPoolTaskScheduler() {
         setPoolSize(4);
         setThreadNamePrefix("AdmissionsAPI-");
