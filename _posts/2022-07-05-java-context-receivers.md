@@ -116,7 +116,7 @@ Mijn tegenargumenten:
 
 2. Klopt in theorie. Maar weegt dit op tegen #1? Dit lijkt me een gevalletje _premature optimization_
 
-3. Memory leaks? Really? Ik heb ze gezien, van dichtbij. Daar zaten nooit inner classes bij. Oja `Hashmap.Entry`, natuurlijk, want leaks zitten altijd in een `Collection`. Met andere woorden, de JDK zit vol met inner classes (wat te denken van jdk8 lambdas...). De auteur maakt op geen enkele manier duidelijk hoe zou leiden tot problemen (en dit is ook niet zo). Onnodige bangmakerij! Zolang je je variabelen declareert in de context van een method (bijvoorbeeld voor een http request), is er zowieso nauwelijks kans op dit soort leaks, want aan het einde wordt deze variabele opgeruimd (_eligible for garbage collection_).
+3. Memory leaks? Really? Ik heb ze gezien, van dichtbij. Daar zaten nooit inner classes bij. Oja `Hashmap.Entry`, natuurlijk, want leaks zitten altijd in een `Collection`. Met andere woorden, de JDK zit vol met inner classes (wat te denken van jdk8 lambdas...). De auteur maakt op geen enkele manier duidelijk hoe die zouden kunnen leiden tot problemen (en dit is ook niet zo). Onnodige bangmakerij! Zolang je je variabelen declareert in de context van een method (bijvoorbeeld voor een http request), is er zowieso nauwelijks kans op dit soort leaks, want aan het einde wordt deze variabele opgeruimd (_eligible for garbage collection_).
 
 Conclusie:
 Je kunt in java iets doen wat ergens wel op context receivers lijkt. De belangrijkste reden om dat te doen is om de code leesbaarder te maken. De nadelen zijn verwaarloosbaar. Je moet wel even je collega's inlichten, want ik geef toe, het ziet er op het eerste gezicht niet java-achtig uit!
