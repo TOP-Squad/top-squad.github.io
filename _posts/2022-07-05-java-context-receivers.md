@@ -86,8 +86,8 @@ Dat kún je dus veranderen in dit:
 
 ```java
 @Bean
-public ThreadPoolTaskScheduler threadPoolTaskScheduler() { {
-    return new ThreadPoolTaskScheduler() {
+public ThreadPoolTaskScheduler threadPoolTaskScheduler() { 
+    return new ThreadPoolTaskScheduler() { {
         setPoolSize(4);
         setThreadNamePrefix("AdmissionsAPI-");
     } };
