@@ -1,36 +1,67 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
+name: "TOP Squad"
+title: "TOP Squad Blog"
+description: "Uitlaatklep voor alle Toppers van TOP Squad."
 logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /
-google_analytics: 'UA-46278016-1'
-disqus: 'demowebsite'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+#google_analytics: 'UA-46278016-1'
+#disqus: 'demowebsite'
+#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
-
+  joey.roosing:
+    name: Joey Roosing
+    display_name: Joey Roosing
+    email: joey.roosing@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"
+  benjamin.faal:
+    name: Benjamin Faal
+    display_name: Benjamin Faal
+    email: benjamin.faal@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"
+  marc.huls:
+    name: Marc Huls
+    display_name: Marc Huls
+    email: marc.huls@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"
+  masudul.haque:
+    name: Masudul Haque
+    display_name: Masudul Haque
+    email: masudul.haque@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"
+  sandra.boekhout:
+    name: Sandra Boekhout
+    display_name: Sandra Boekhout
+    email: sandra.boekhout@top-squad.nl
+    web: https://top-squad.nl
+    description: "Verbinder bij Top Squad"
+  theo.janssen:
+    name: Theo Janssen
+    display_name: Theo Janssen
+    email: theo.janssen@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"  
+  sander.dahlberg:
+    name: Sander Dahlberg
+    display_name: Sander Dahlberg
+    gravatar: 15b8430273ba063edbada7ffc1cfc08f
+    email: sander.dahlberg@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer en oprichter bij Top Squad"
+  sander.hautvast:
+    name: Sander Hautvast
+    display_name: Sander Hautvast
+    email: sander.hautvast@top-squad.nl
+    web: https://top-squad.nl
+    description: "Developer bij Top Squad"
 # Plugins
 plugins:
   - jekyll-paginate

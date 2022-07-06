@@ -1,3 +1,16 @@
+#
+
+Installatie windows voor het lokaal kunnen serveren van de blog:
+
+https://www.kiltandcode.com/2020/04/30/how-to-create-a-blog-using-jekyll-and-github-pages-on-windows/
+(tot How to Create a New Blog using Jekyll)
+
+1. gem install bundler
+2. bundle install
+3. bundle add webrick
+4. bundle exec jekyll serve --watch
+
+
 # Mediumish - Jekyll Theme
 
 [Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/template-mediumish-bootstrap-jekyll/) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
