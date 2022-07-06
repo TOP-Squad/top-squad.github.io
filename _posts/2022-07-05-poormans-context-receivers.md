@@ -33,7 +33,7 @@ begin
   end;
 ```
 
-https://smartpascal.github.io/help/assets/with.htm
+[https://smartpascal.github.io/help/assets/with.htm]
 
  
 
@@ -53,13 +53,13 @@ Maar daar gaat deze post niet over. In java bestaan er geen context receivers, d
 Totdat ik toevallig hier tegenaan liep:
 
 ```java
-new ArrayList<Integer>() {
+new ArrayList<Integer>() {{
    add(1);
    add(2);
 }};
 ```
 
-https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java
+[https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java]
 
  
 
@@ -95,7 +95,7 @@ Dat kún je dus veranderen in dit:
 
 ```java
 @Bean
-public ThreadPoolTaskScheduler threadPoolTaskScheduler() {
+public ThreadPoolTaskScheduler threadPoolTaskScheduler() {{
     return new ThreadPoolTaskScheduler() {
         setPoolSize(4);
         setThreadNamePrefix("AdmissionsAPI-");
