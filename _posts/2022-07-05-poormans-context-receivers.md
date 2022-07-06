@@ -110,7 +110,7 @@ Wat zijn de argumenten van deze auteur?
 
  
 Mijn tegenargumenten:
-1. Het is even wennen, maar als je het patroon herkent, is het leesbaarder. [_Delete as much code as you can_](https://matt-rickard.com/reflections-on-10-000-hours-of-programming/)
+1. Het is even wennen, maar als je het patroon herkent, is het juist leesbaarder. [_Delete as much code as you can_](https://matt-rickard.com/reflections-on-10-000-hours-of-programming/)
 
 2. Klopt in theorie. Maar weegt dit op tegen #1? Dit lijkt me een gevalletje _premature optimization_
 
