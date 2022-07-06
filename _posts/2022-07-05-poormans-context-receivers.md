@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Poor man's Context receivers in Java"
+title:  "Context Receivers in Java"
 author: Sander
 categories: [ Java, Discussion ]
 tags: [red, yellow]
@@ -32,8 +32,7 @@ begin
     ...
   end;
 ```
-
-[https://smartpascal.github.io/help/assets/with.htm]
+[https://smartpascal.github.io/help/assets/with.htm](bron)
 
  
 
@@ -58,24 +57,20 @@ new ArrayList<Integer>() { {
    add(2);
 }};
 ```
-
-[https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java]
+van [https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java](stackoverflow)
 
  
-
 `Double curly brace initialization` (waarom heb ik dit nooit eerder gezien?) is een combinatie van twee enkelvoudige curly braces ...doh!... Accolades in goed Nederlands!
 
 1. één voor een anonymous inner class
 2. één voor een initializer block
 
- 
+Ik zie beide vrij weinig in gangbare codebases. En de combinatie is helemaal zeldzaam. Waarom?
 
-En afgezien van het geringe 'side-effect' dat je een subclass instantieert in plaats van het type zelf, zijn er voor zover ik kan bedenken geen nadelen voor deze werkwijze. Het zorgt er natuurlijk wel voor dat je het niet op `final` classes kan toepassen.
-
+Afgezien van het geringe 'side-effect' dat je een subclass instantieert in plaats van het type zelf, zijn er voor zover ik kan bedenken geen nadelen voor deze werkwijze. Dit zorgt er natuurlijk wel voor dat je het niet op `final` classes kan toepassen.
  
 Dus, neem deze code (realistisch voorbeeld uit een spring `Configuration` class):
 
- 
 
 ```java
 @Bean
@@ -86,8 +81,6 @@ public ThreadPoolTaskScheduler threadPoolTaskScheduler() {
     return threadPoolTaskScheduler;
 }
 ```
-
- 
 
 Dat kún je dus veranderen in dit:
 
@@ -108,28 +101,22 @@ En dat ziet er min of meer uit als de kotlin en pascal voorbeelden hierboven. Bi
 Een verschil is natuurlijk wel dat je deze 'truuk' alleen direct na instantiatie kunt toepassen.
 
  
-Ooeps! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).
+Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).
 
 Argumenten:
-1. Het is leesbaarder maar dat is niet belangrijk.
+1. Het is minder leesbaarder.
 2. Je creëert, zoals ik al aangaf een inner subclass, wat extra overhead is voor de classloader en de garbage collector
 3. De inner subclass bevat een referentie naar het object waar je hem geïnstantieerd hebt. Dat geeft weer extra overhead en leidt tot memory leaks.
 
  
-
 Mijn tegenargumenten:
 
-1. Je schrijft code voor je collega's, niet voor computers. Leesbaarheid is altijd belangrijk. _Delete as much code as you can_ (https://matt-rickard.com/reflections-on-10-000-hours-of-programming/)
+1. Het is even wennen, maar als je het patroon herkent, is het leesbaarder. Geldt voor alle talen toch?. _Delete as much code as you can_ (https://matt-rickard.com/reflections-on-10-000-hours-of-programming/)
 
-2. Klopt natuurlijk. Maar weegt dit op tegen #1? Dit lijkt me een gevalletje _premature optimization_
+2. Klopt in theorie. Maar weegt dit op tegen #1? Dit lijkt me een gevalletje _premature optimization_
 
-3. Memory leaks? Really? Ik heb ze gezien, van dichtbij. Daar zaten nooit inner classes bij. Oja `Hashmap.Entry`, natuurlijk, want leaks zitten altijd in een `Collection`. Met andere woorden, de JDK zit vol met inner classes (wat te denken van jdk8 lambdas...). De auteur maakt op geen enkele manier duidelijk hoe zou leiden tot problemen. Onnodige bangmakerij.
+3. Memory leaks? Really? Ik heb ze gezien, van dichtbij. Daar zaten nooit inner classes bij. Oja `Hashmap.Entry`, natuurlijk, want leaks zitten altijd in een `Collection`. Met andere woorden, de JDK zit vol met inner classes (wat te denken van jdk8 lambdas...). De auteur maakt op geen enkele manier duidelijk hoe zou leiden tot problemen (en dit is ook niet zo). Onnodige bangmakerij! Zolang je je variabelen declareert in de context van een method (bijvoorbeeld voor een http request), is er zowieso nauwelijks kans op dit soort leaks, want aan het einde wordt deze variabele opgeruimd (_eligible for garbage collection_).
 
-4. Oké, in de context van EJB's (waar de auteur vandaan lijkt te komen, we hebben het over 2014), heb ik wel eens nare problemen gehad met subclasses. Maar die kwamen door JEE zelf (als gevolg van AOP), niet door curly braces.
-
- 
-
-Conclusie: Er sterven geen katjes door double curly braces.
-
-	
+Conclusie:
+Je kunt in java iets doen wat ergens wel op context receivers lijkt. De belangrijkste reden om dat te doen is om de code leesbaarder te maken. De nadelen zijn verwaarloosbaar. Je moet wel even je collega's inlichten, want ik geef toe, het ziet er op het eerste gezicht niet java-achtig uit!
 	
