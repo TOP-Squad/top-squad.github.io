@@ -120,3 +120,5 @@ Mijn tegenargumenten:
 Conclusie:
 Je kunt in java iets doen wat ergens wel op context receivers lijkt. De belangrijkste reden om dat te doen is om de code leesbaarder te maken. De nadelen zijn verwaarloosbaar. Je moet wel even je collega's inlichten, want ik geef toe, het ziet er op het eerste gezicht niet java-achtig uit!
 	
+Edit:
+Je hebt natuurlijk wel allerlei alternatieven. Bijvoorbeeld `List.of()` als je een `Collection` wil instantieren met waardes. `@PostConstruct` is sowieso gangbaarder en meestal beter dan een `initializer block` (want alle _wiring_ is al gebeurd). En het gebruik van `method chaining` (zoals in builders) vermindert herhaling van de instantie waar je mee werkt. 
