@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Context Receivers in Java"
+title:  "Context Receivers in Java?"
 author: Sander
 categories: [ Java, Discussion ]
 tags: [red, yellow]
 image: assets/images/contextmatters.jpg
-description: "Is dit een bruikbaar pattern?"
+beforetoc: "Double Curly Brace Initialization. Een obscuur taal element van java, dat je meer zou moeten gebruiken"
+toc: false
 featured: false
 hidden: false
 rating: 4.5
