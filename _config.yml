@@ -13,7 +13,7 @@ permalink: /:title/
 
 # Authors
 authors:
-   joey.roosing:
+  joey.roosing:
     name: Joey Roosing
     display_name: Joey Roosing
     email: joey.roosing@top-squad.nl
@@ -25,7 +25,7 @@ authors:
     email: benjamin.faal@top-squad.nl
     web: https://top-squad.nl
     description: "Developer bij Top Squad"
- marc.huls:
+  marc.huls:
     name: Marc Huls
     display_name: Marc Huls
     email: marc.huls@top-squad.nl
