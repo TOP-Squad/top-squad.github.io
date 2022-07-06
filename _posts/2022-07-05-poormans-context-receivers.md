@@ -43,6 +43,7 @@ with(loggingContext) {
         ...
 }
 ```
+[https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/]()
 
 Ik geloof dat onder water pascal meer op _javascript_ lijkt in het opzoeken van variabelen in verschillende contexten, dan _kotlin_ of _java_, maar dit concept en het keyword zijn dezelfde. Je creëert een context waarbinnen een object instantie (tijdelijk) de nieuwe `this` wordt. 
 
@@ -59,7 +60,7 @@ new ArrayList<Integer>() { {
 [https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java](stackoverflow)
 
  
-`Double curly brace initialization` (waarom heb ik dit nooit eerder gezien?) is een combinatie van twee enkelvoudige curly braces ...doh!... Accolades in goed Nederlands!
+`Double curly brace initialization` (waarom heb ik dit nooit eerder gezien?) is een combinatie van twee enkelvoudige curly braces ...doh!... accolades in goed Nederlands!
 
 1. één voor een anonymous inner class
 2. één voor een initializer block
@@ -101,7 +102,7 @@ Een verschil is natuurlijk wel dat je deze 'truuk' alleen direct na instantiatie
  
 Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).
 
-Wat zijn de argumenten van de auteur:
+Wat zijn de argumenten van deze auteur:
 1. Het is minder leesbaarder.
 
 2. Je creëert, zoals ik al aangaf een inner subclass, wat extra overhead is voor de classloader en de garbage collector
