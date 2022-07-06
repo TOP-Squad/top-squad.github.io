@@ -55,7 +55,7 @@ Totdat ik toevallig hier tegenaan liep:
 new ArrayList<Integer>() { {
    add(1);
    add(2);
-}};
+} };
 ```
 van [https://stackoverflow.com/questions/1958636/what-is-double-brace-initialization-in-java](stackoverflow)
 
@@ -90,7 +90,7 @@ public ThreadPoolTaskScheduler threadPoolTaskScheduler() { {
     return new ThreadPoolTaskScheduler() {
         setPoolSize(4);
         setThreadNamePrefix("AdmissionsAPI-");
-    }};
+    } };
 }
 ```
  
