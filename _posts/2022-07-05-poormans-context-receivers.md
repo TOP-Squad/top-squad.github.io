@@ -6,7 +6,6 @@ categories: [ Java, Discussion ]
 tags: [red, yellow]
 image: assets/images/contextmatters.jpg
 beforetoc: "Double Curly Brace Initialization. Een obscuur taal element van java, dat je meer zou moeten gebruiken"
-toc: true
 featured: false
 hidden: false
 rating: 4.5
@@ -14,7 +13,6 @@ rating: 4.5
 Toen ik las dat het concept 'Context Receiver' werd geintroduceerd in [Kotlin](https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/), was mijn eerste gedachte: 'Dat ken ik nog van Pascal!' Ik heb sinds de jaren negentig geen Pascal meer gezien (waar blijft de tijd?), maar het bleek te kloppen:
 
  
-
 ```pascal
 type
   // Declare a customer record
@@ -32,8 +30,7 @@ begin
     firstName := 'John';
     ...
   end;
-```
-[https://smartpascal.github.io/help/assets/with.htm](bron)
+```[https://smartpascal.github.io/help/assets/with.htm](bron)
 
 
 De Kotlin syntax is in de basis het zelfde:
@@ -43,8 +40,7 @@ with(loggingContext) {
         startBusinessOperation()
         ...
 }
-```
-[https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/]()
+```[https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/]()
 
 Ik geloof dat onder water pascal meer op _javascript_ lijkt in het opzoeken van variabelen in verschillende contexten, dan _kotlin_ of _java_, maar dit concept en het keyword zijn dezelfde. Je creëert een context waarbinnen een object instantie (tijdelijk) de nieuwe `this` wordt. 
 
@@ -101,9 +97,9 @@ En dat ziet er min of meer uit als de kotlin en pascal voorbeelden hierboven. He
 Een verschil is natuurlijk wel dat je deze 'truuk' alleen direct na instantiatie kunt toepassen.
 
  
-*Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).*
+**Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).**
 
-Wat zijn de argumenten van deze auteur:
+Wat zijn de argumenten van deze auteur?
 1. Het is minder leesbaarder.
 
 2. Je creëert, zoals ik al aangaf een inner subclass, wat extra overhead is voor de classloader en de garbage collector
