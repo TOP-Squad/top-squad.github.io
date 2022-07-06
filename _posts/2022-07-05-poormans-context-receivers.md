@@ -34,7 +34,6 @@ begin
 ```
 [https://smartpascal.github.io/help/assets/with.htm](bron)
 
- 
 
 De Kotlin syntax is in de basis het zelfde:
 
@@ -45,7 +44,7 @@ with(loggingContext) {
 }
 ```
 
-Ik geloof dat onder water pascal meer op _javascript_ lijkt in het opzoeken van variabelen in verschillende contexten, dan _kotlin_ of _java_, maar dit concept en het keyword zijn dezelfde.
+Ik geloof dat onder water pascal meer op _javascript_ lijkt in het opzoeken van variabelen in verschillende contexten, dan _kotlin_ of _java_, maar dit concept en het keyword zijn dezelfde. Je creëert een context waarbinnen een object instantie (tijdelijk) de nieuwe `this` wordt. 
 
 Maar daar gaat deze post niet over. In java bestaan er geen context receivers, dus einde verhaal zou je denken.
 
