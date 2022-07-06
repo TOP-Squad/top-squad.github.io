@@ -6,7 +6,7 @@ categories: [ Java, Discussion ]
 tags: [red, yellow]
 image: assets/images/contextmatters.jpg
 beforetoc: "Double Curly Brace Initialization. Een obscuur taal element van java, dat je meer zou moeten gebruiken"
-toc: false
+toc: true
 featured: false
 hidden: false
 rating: 4.5
@@ -101,7 +101,7 @@ En dat ziet er min of meer uit als de kotlin en pascal voorbeelden hierboven. He
 Een verschil is natuurlijk wel dat je deze 'truuk' alleen direct na instantiatie kunt toepassen.
 
  
-Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).
+*Maar, Ojee! iemand noemt het een [anti-pattern](https://blog.jooq.org/dont-be-clever-the-double-curly-braces-anti-pattern/).*
 
 Wat zijn de argumenten van deze auteur:
 1. Het is minder leesbaarder.
