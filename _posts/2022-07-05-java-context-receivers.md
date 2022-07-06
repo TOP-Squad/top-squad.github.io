@@ -4,12 +4,15 @@ title:  "Context Receivers in Java?"
 author: Sander
 categories: [ Java, Discussion ]
 tags: [red, yellow]
-image: assets/images/contextmatters.jpg
+image: assets/images/joao-henrique-3EKQxtOEXHw-unsplash.jpg
 beforetoc: "Double Curly Brace Initialization. Een obscuur taal element van java, dat je meer zou moeten gebruiken"
 featured: false
 hidden: false
 rating: 4.5
 ---
+Photo by <a href="https://unsplash.com/@nightingale1917?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">João Henrique</a> on <a href="https://unsplash.com/s/photos/receiver?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+
 Toen ik las dat het concept 'Context Receiver' werd geintroduceerd in [Kotlin](https://blog.jetbrains.com/kotlin/2022/02/kotlin-1-6-20-m1-released/), was mijn eerste gedachte: 'Dat ken ik nog van Pascal!' Ik heb sinds de jaren negentig geen Pascal meer gezien (waar blijft de tijd?), maar het bleek te kloppen:
 
  
