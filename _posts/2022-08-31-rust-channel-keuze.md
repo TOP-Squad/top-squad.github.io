@@ -9,7 +9,8 @@ featured: true
 hidden: false
 lang: nl
 ---
-Stel je voor dat je wordcount oftwel `wc` moet implementeren in Rust. Misschien bevat de input veel ruis, zoals leestekens, getallen of zelfs onmogelijke UTF karakters. Je wil de ruis wegfilteren. Dat zorgt ervoor dat de verwerkingstijd per woord waarschijnlijk langer is dan de tijd voor I/O. In dat geval is het misschien zinvol om één (main) thread de file te laten lezen en een x-aantal andere de verwerking te laten doen. Elke job krijgt een eigen `Map<String, usize>` voor de telling. De afzonderlijke tellingen worden tot slot samengevoegd (bijvoorbeeld in de main thread). Een soort fork-join dus. 
+Stel je voor dat je de woorden in een bestand moet tellen (aantal per woord). Het eindresultaat in het geheugen is dus een _Map_ met als _key_ het woord en als _value_ het aantal.
+Misschien bevat de input veel ruis, zoals leestekens, getallen of zelfs onmogelijke UTF karakters. Je wil de ruis wegfilteren. Dat zorgt ervoor dat de verwerkingstijd per woord waarschijnlijk langer is dan de tijd voor I/O. In dat geval is het misschien zinvol om één (main) thread de file te laten lezen en een x-aantal andere de verwerking te laten doen. Elke job krijgt een eigen `Map<String, usize>` voor de telling. De afzonderlijke tellingen worden tot slot samengevoegd (bijvoorbeeld in de main thread). Een soort fork-join dus. 
 
 Daarnaast willen we dat het proces niet zoveel geheugen gaat bevatten als het bestand groot is, want dan kan vele gigabytes beslaan. Regel voor regel inlezen en gelijk verwerken dus.
 
