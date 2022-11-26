@@ -3,7 +3,7 @@ layout: post
 title:  "Tekst detectie met OpenCV in rust"
 author: sander.hautvast
 categories: [Rust, OpenCV, Deep Learning]
-image: assets/images/traffic-sign-cropped.png
+image: assets/images/typos.jpg
 beforetoc: ""
 featured: true
 hidden: false
