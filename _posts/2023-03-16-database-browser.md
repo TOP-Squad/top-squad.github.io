@@ -103,8 +103,8 @@ Ga naar https://localhost:5173/ (Let op: gebruik Chrome en https!)
 
 De demo UI is gebouwd met [Lit](https://lit.dev/). Dit javascript/typescript framework is wat ik ook gebruik bij mijn huidige klant. In vergelijking met bijvoorbeeld _angular_ valt op hoe lichtgewicht het is. 
 
-Er is een ook een branch waarin de UI gebaseerd is op SQL.js. Deze is ook getest in firefox.
+Er is een ook een branch waarin de UI gebaseerd is op SQL.js. Deze is getest in _Firefox_.
 
-Het grote nadeel ervan is dat zowel SQL.js als de SQLite WASM build geen ESM modules zijn, zodat je 10 jaar terug bent in de tijd qua web development. Er is echter een wrapper die maakt dat je SQLite/WASM kunt gebruiken als `import` in een _[vite](https://vitejs.dev/)_ project. Andere build systemen, webpack, parcel etc, zou ook moeten kunnen, maar dat werkt niet _out of the box_. Vite en Parcel zijn nieuwe buildsystemen, die lekker werken vanwege hun snelheid en kleine hoeveelheid setup die je nodig hebt om aan de slag te kunnen.
+Het grote nadeel ervan is dat zowel SQL.js als de SQLite WASM build geen ESM modules zijn, zodat je 10 jaar terug bent in de tijd qua web development. Er is echter een wrapper ([https://github.com/overtone-app/sqlite-wasm-esm/](https://github.com/overtone-app/sqlite-wasm-esm/)) die maakt dat je SQLite/WASM kunt gebruiken als `import` in een _[vite](https://vitejs.dev/)_ project. Andere build systemen, webpack, parcel etc, zou ook moeten kunnen, maar dat werkt niet _out of the box_. Vite en Parcel zijn nieuwe buildsystemen, die lekker werken vanwege hun snelheid en kleine hoeveelheid setup die je nodig hebt om aan de slag te kunnen.
 
 <div style="text-align: right">∞</div>
