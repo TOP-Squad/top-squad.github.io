@@ -124,3 +124,5 @@ Je kunt in java iets doen wat ergens wel op context receivers lijkt. De belangri
 **Edit:**
 
 Je hebt natuurlijk wel allerlei alternatieven. Bijvoorbeeld `List.of()` als je een `Collection` wil instantieren met waardes. `@PostConstruct` is sowieso gangbaarder en meestal beter dan een `initializer block` (want alle _wiring_ is al gebeurd). En het gebruik van `method chaining` (zoals in builders) vermindert ook herhaling van de instantie waar je mee werkt. 
+
+<div style="text-align: right">∞</div>

@@ -121,3 +121,5 @@ Daarna zakte het geheugengebruik in naar ca 3 Gb.
 
 **Conclusie**<br/>
 Channels zijn generieke constructen. Het komt aan op de manier waarop ze gebruikt worden. Het kan zijn dat een _bounded_ channel onwenselijk is, bijvoorbeeld als het maximum op geen enkele manier te bepalen is, of wanneer de _lees_ snelheid gegarandeerd hoog genoeg is. Het geheugengebruik per job is natuurlijk ook een factor van belang. Als dat allemaal niet aan de hand is, is het veiliger om _bounded_ te nemen. Kleine wijziging, groot verschil!
+
+<div style="text-align: right">∞</div>

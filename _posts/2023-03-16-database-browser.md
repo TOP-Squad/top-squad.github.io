@@ -13,7 +13,7 @@ lang: nl
 
 Maar dan dus op mobiele telefoons, op IOT devices, of als onderdeel van een desktop applicatie. De runtime is zo klein dat je hem makkelijk mee kan bundelen (en de licentie staat dat ook toe). In plaats van een een gewoon bestand, open je een SQLite bestand en je leest hem met standaard SQL.
 
-Ik zag afgelopen zomer een [presentatie](https://www.youtube.com/watch?v=lP_qdhAHFlg)) van Steve Sanderson ([github](https://github.com/SteveSandersonMS), [blog](http://blog.stevensanderson.com/)) developer voor .Net en bedenker van [blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor). Een feature van blazor die hij liet zien is SQLite in de browser. Dit maakt het mogelijk om vele duizenden (100.000) rijen in de browser te tonen (dat kan traditioneel helemaal niet) en razendsnel te scrollen en te filteren. 
+Ik zag afgelopen zomer een [presentatie](https://www.youtube.com/watch?v=lP_qdhAHFlg) van Steve Sanderson ([github](https://github.com/SteveSandersonMS), [blog](http://blog.stevensanderson.com/)) developer voor .Net en bedenker van [blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor). Een feature van blazor die hij liet zien is SQLite in de browser. Dit maakt het mogelijk om vele duizenden (100.000) rijen in de browser te tonen (dat performt traditioneel helemaal niet) en razendsnel te scrollen en te filteren. 
 
 ![plaatje](/assets/images/steve-sanderson-presentation-blazor.png)
 
@@ -101,9 +101,10 @@ Ga naar https://localhost:5173/ (Let op: gebruik Chrome en https!)
 
 ![plaatje](/assets/images/sqlighter-screenshot.png)
 
-De demo UI is gebouwd met [Lit](https://lit.dev/). Dit javascript/typescript framework is wat ik ook gebruik bij mijn huidige klant. Ik kan het alleen maar vergelijken met _angular_ en dan valt op hoe lichtgewicht het is. 
+De demo UI is gebouwd met [Lit](https://lit.dev/). Dit javascript/typescript framework is wat ik ook gebruik bij mijn huidige klant. In vergelijking met bijvoorbeeld _angular_ valt op hoe lichtgewicht het is. 
 
 Er is een ook een branch waarin de UI gebaseerd is op SQL.js. Deze is ook getest in firefox.
 
 Het grote nadeel ervan is dat zowel SQL.js als de SQLite WASM build geen ESM modules zijn, zodat je 10 jaar terug bent in de tijd qua web development. Er is echter een wrapper die maakt dat je SQLite/WASM kunt gebruiken als `import` in een _[vite](https://vitejs.dev/)_ project. Andere build systemen, webpack, parcel etc, zou ook moeten kunnen, maar dat werkt niet _out of the box_. Vite en Parcel zijn nieuwe buildsystemen, die lekker werken vanwege hun snelheid en kleine hoeveelheid setup die je nodig hebt om aan de slag te kunnen.
 
+<div style="text-align: right">∞</div>

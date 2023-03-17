@@ -114,3 +114,4 @@ _PS. de regelnummers beginnen elk blok weer met 1, maar je mag ze in je hoofd do
 maar je kunt ook in de gitlab repo kijken: [https://gitlab.com/sander-hautvast/opencv-textdetection-rust](https://gitlab.com/sander-hautvast/opencv-textdetection-rust)
 
 
+<div style="text-align: right">∞</div>
