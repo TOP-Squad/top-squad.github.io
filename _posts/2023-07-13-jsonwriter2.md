@@ -5,8 +5,8 @@ author: sander.hautvast
 categories: [json, ASM]
 image: assets/images/neom-Oj8w6hWC0dU-unsplash.jpg
 beforetoc: ""
-featured: false
-hidden: true
+featured: true
+hidden: false
 lang: nl
 ---
 **Deel 2 Dynamische code**
