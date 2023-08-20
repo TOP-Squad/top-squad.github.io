@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Multidimensionele arrays bestaan niet!"
+title:  "Multidimensional performance"
 author: sander.hautvast
 categories: [java, performance]
-image: assets/images/arrays/nik-fDaUCTp28dA-unsplash.jpg
+image: assets/images/arrays/swfvdia50a151.webp
 beforetoc: ""
 featured: true
 hidden: false
 lang: nl
 ---
-Ik had niet gedacht een artikel te zullen schrijven over arrays in java. Ze zijn bijzonder saai, en wanneer heb je ze eigenlijk nodig? 
+Waarom een blog over de performance van arrays in java? Ze zijn bijzonder saai, en wanneer heb je ze eigenlijk nodig? 
 
 De enige (actieve) herinnering aan arrays in een _echte_ codebase die ik heb, ging over een situatie dat je eigenlijk multiple return parameters zou willen hebben (zoals in python), of (door de taal ondersteunde) tuples (zoals in rust). Als ik nu in een review een methode met `Object[]` als return parameter zou zien, zou dat tot kamervragen leiden.
 >Niet heel erg opzienbarend
 
 In een [vorige blog](/jsonwriter/) had ik al geschreven over de slechte performance van _java.lang.reflect.Array_. In een poging daar een beter alternatief voor te maken stuitte ik op een paar onverwachte eigenaardigheden.
 
-Arrays zijn sinds java 1.0 niet veranderd. Dat is logisch gezien het feit dat ze een standaard onderdeel zijn van de meeste talen en het feit dat java altijd backwards compatible is gebleven. En, tja, java uit die tijd, is, soms _apart_ of beter gezegd _C-achtig_.
+Arrays zijn sinds java 1.0 niet veranderd. Dat is logisch gezien het feit dat ze een standaard onderdeel zijn van de meeste talen en het feit dat java altijd backwards compatible is gebleven. En, tja, java uit die tijd, is, soms _apart_ of anders gezegd _C-achtig_.
 
 __3 manieren om een multidimensionele arrays te instantieren__
 
