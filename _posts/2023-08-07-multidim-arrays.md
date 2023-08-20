@@ -94,8 +94,8 @@ Een ander aspect van het citaat van Kabutz is de suggestie dat je met een 1-dime
 
    Benchmark    | Mode  | Cnt  |  Score    |   Error    |  Units
 ----------------|-------|-----:|----------:|-----------:|---------
-seqMultArrayGetLRTD | avgt |   5 | 1399817.940 |±  271516.298 | ns/op
-seqMultArrayGetTDLR | avgt |   5 |  392543.679 |±    3671.543 | ns/op
+seqMultArrayGetLRTD | avgt |   5 | 1399817.940 | ±  271516.298 | ns/op
+seqMultArrayGetTDLR | avgt |   5 |  392543.679 | ±    3671.543 | ns/op
 
 >
 
