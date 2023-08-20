@@ -75,7 +75,7 @@ public long classicArrayGetTDLR() {
     return t;
 }
 ```
-TDLR staat voor Top Down (buitenste loop), Left Right.
+TDLR staat voor Top Down (buitenste loop), Left Right. Deze volgorde doorloopt eerst de binnenste array (1 rij) en gaat vervolgens naar de volgende rij. LRTD gaat voor 1 kolom door elke rij en dan naar de volgende kolom.
 
    Benchmark    | Mode  | Cnt  |  Score    |   Error    |  Units
 ----------------|-------|-----:|----------:|-----------:|---------
