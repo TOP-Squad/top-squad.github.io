@@ -110,3 +110,5 @@ Het debuggen van fouten is lastiger omdat je niet een referentie krijgt naar waa
 Tot slot. Een record is vrijwel hetzelfde als een gewone class. Het enige waar je rekening mee moet houden is dat in tegenstelling tot beans, de getters en setters niet beginnen met _get_ dan wel _set_. De naam van de methode is gelijk aan die van de property.
 
 Happy programming!
+
+<div style="text-align: right">∞</div>

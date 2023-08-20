@@ -165,3 +165,5 @@ We kunnen drie dingen doen:
 3. dynamische bytecodegeneratie voor elke soort array met ASM (_keimoeilijk_)
 
 Genoeg voor nu. Volgende keer verder met Collections en Maps. En we gaan de dynamische dieptes in met runtime inspectie van javabeans en records.
+
+<div style="text-align: right">∞</div>
