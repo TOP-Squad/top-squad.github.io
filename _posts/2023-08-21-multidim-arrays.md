@@ -104,7 +104,7 @@ seqMultArrayGetTDLR | avgt |   5 |  392543.679 | ±    3671.543 | ns/op
 Zoals dit?
 ```java
 public int get(int row, int col) {
-    return row * this.cols + col;
+    return data[row * this.cols + col];
 }
 
 public void set(int row, int col, int val) {
