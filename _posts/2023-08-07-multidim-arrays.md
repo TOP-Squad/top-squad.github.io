@@ -145,7 +145,7 @@ Hoe voorkom je dat de JIT compiler je dode benchmark code wegcompileert?
 1. neem een return parameter op (zie voorbeeld)
 2. gebruik _compiler blackholes_ (vanaf java 17)
 
-JMH zorgt dat de return parameters in een zwart gat verdwijnen. Dit voorkomt ongewenste optimalisatie, maar heeft zelf wel een eigen performance impact en als response tijden klein zijn, gaat die overheersen. _
+JMH zorgt dat de return parameters in een zwart gat verdwijnen. Dit voorkomt ongewenste optimalisatie, maar heeft zelf wel een eigen performance impact en als response tijden klein zijn, gaat die overheersen.
 
 _Compiler blackholes_ zorgen ervoor dat je benchmark code niet als dode code wordt opgeruimd, maar dat de aanroep naar de JMH blackhole wel weg-geoptimaliseerd wordt, zodat je een zo zuiver mogelijke meting krijgt.
 
