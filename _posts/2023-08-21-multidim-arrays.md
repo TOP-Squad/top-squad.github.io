@@ -114,16 +114,17 @@ public void set(int row, int col, int val) {
 
    Benchmark     | Mode  | Cnt  |  Score     |   Error    |  Units
 -----------------|-------|-----:|-----------:|-----------:|---------
-seq2DArrayGetLRTD   | avgt |   5 |  533659.920 |±   87889.355 | ns/op
-seq2DArrayGetTDLR   | avgt |   5 |  400005.690 |±    7020.963 | ns/op
+seq2DArrayGetLRTD   | avgt |   5 | 1362950.693 |±   43153.084 | ns/op
+seq2DArrayGetTDLR   | avgt |   5 |  390777.378 |±   11339.226 | ns/op
 
 >
 
->Dit geeft dus alleen een verbetering voor de niet-efficiente manier van itereren: LRTD. 
+>Dat maakt dus niet uit.
 
 **Conclusie**
 
-Zelf je indexen berekenen heeft niet zoveel zin. (tenzij je op mijn M2 werkt, daar was het circa 25% sneller)
+Zelf je indexen berekenen heeft alleen zin als je om de één of andere reden niet van caching of prefetching gebruik kunt maken. Bijvoorbeeld als je willekeurige (niet door de cpu voorspelbare) pixels in een plaatje aan zou passen.
+
 
 >**En _write_ acties dan?**
 
@@ -136,7 +137,9 @@ seq2DArraySetTDLR   | avgt | 5 |  721699.703 |±  22605.344 | ns/op
 
 >
 
-3 tot 4x zo snel, afhankelijk dan de implementatie. En hier heb je wel voordeel van zelf je index berekenen in een 2 dimensionele array. Ik weet niet waarom. Iemand? 
+3 tot 4x zo snel, afhankelijk dan de implementatie. Zelf indexen berekenen is hier kennelijk wel iets sneller.
+
+--> Mijn advies zou zijn, om zelf te testen op de doelarchitectuur (niet je eigen laptop), als je wil weten hoe het voor je organisatie uitpakt.
 
 ##### _[compiler blackholes](https://shipilev.net/jvm/anatomy-quarks/27-compiler-blackholes/)_
 
