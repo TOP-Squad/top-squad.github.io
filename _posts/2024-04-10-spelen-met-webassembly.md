@@ -36,7 +36,7 @@ Signals werken direct. Je registreert er één en het framework weet waar hij ge
 
 Leptos bevat behoorlijke tutorials en een fraaie set standaard componenten. Ze hebben, denk ik tijd besteed aan het verbergen van de lelijke code van hierboven. Goed werk. Toch vraag ik me af of de webwereld zit te wachten op `rust`.
 
-Natuurlijk kun je ook andere talen compileren naar webassembly. Maar mijn indruk is dat het hobby werk blijft. Er is tot nog toe geen FAANG op gesprongen om er een hype van te maken, en een volwassen framework. De JS wereld is ook te groot om er snel een deuk in te kunnen slaan.
+Natuurlijk kun je ook andere talen compileren naar webassembly. Maar mijn indruk is dat het hobby werk blijft. Er is tot nog toe geen FAANG (facebook, apple etc) op gesprongen om er een hype van te maken, en een volwassen framework. De JS wereld is ook te groot om er snel een deuk in te kunnen slaan.
 
 En waarom zou je het doen? De doorsnee web apps in javascript zijn snel genoeg. Als er performance problemen zijn, liggen die meestal op de server.
 
