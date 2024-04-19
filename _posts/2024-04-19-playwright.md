@@ -9,7 +9,7 @@ featured: true
 hidden: false
 lang: nl
 ---
-Ik ben heel erg blij met [playwright](https://playwright.dev/)!
+Ik ben gewoon blij met [playwright](https://playwright.dev/)!
 
 Ik ben geen tester, maar heb altijd veel getest. Waar heb ik eerder mee gewerkt?
 * fitnesse
