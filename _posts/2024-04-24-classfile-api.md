@@ -9,7 +9,7 @@ featured: true
 hidden: false
 lang: nl
 ---
-Op een middag deze de week liep ik weer eens tegen de nieuwe classfile api (jdk22) aan. Vorig jaar had ik al wel de [presentatie van Brian Goetz](https://www.youtube.com/watch?v=pcg-E_qyMOI) hierover gezien. Hij is de _java language architect_ van Oracle. Zijn verhaal is boeiend omdat hij weergeeft wat de rol van intuïtie is als je iets nieuws aan het ontwikkelen bent. 
+Op een middag deze week liep ik weer eens tegen de nieuwe classfile api (jdk22) aan. Vorig jaar had ik al wel de [presentatie van Brian Goetz](https://www.youtube.com/watch?v=pcg-E_qyMOI) hierover gezien. Hij is de _java language architect_ van Oracle. Zijn verhaal is boeiend omdat hij weergeeft wat de rol van intuïtie is als je iets nieuws aan het ontwikkelen bent. 
 
 Goetz:
 >"And I looked at the API and I'm like: 'I don't like it. I'm not happy.'
