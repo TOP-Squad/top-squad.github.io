@@ -2,7 +2,7 @@
 layout: post
 title: "Huffman coding in Kotlin"
 author: sander.hautvast
-categories: [java, jdk-22, rust, apm]
+categories: [kotlin]
 image:  assets/images/huffman/ivory.jpeg
 alt: an image of a computer scientist on top of a white concrete ivory tower that is also a graph of nodes and vertices
 beforetoc: "seeds"
