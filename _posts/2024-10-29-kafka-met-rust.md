@@ -74,7 +74,7 @@ Hoe krijg je dit aan de praat?
 mkdir hello-kafka && cd hello-kafka
 cargo init
 ```
-4. zit dit in Cargo.toml (die nu aangemaakt is):
+4. zet de libraries die je nodig hebt in Cargo.toml (die nu aangemaakt is):
 ```toml
 [dependencies]
 kafka = "0.10"
