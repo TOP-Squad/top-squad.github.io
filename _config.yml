@@ -38,15 +38,9 @@ authors:
     email: masudul.haque@top-squad.nl
     web: https://top-squad.nl
     description: "Developer bij Top Squad"
-  sandra.boekhout:
-    name: Sandra Boekhout
-    display_name: Sandra Boekhout
-    email: sandra.boekhout@top-squad.nl
-    web: https://top-squad.nl
-    description: "Verbinder bij Top Squad"
   theo.janssen:
     name: Theo Janssen
-    display_name: Theo Janssen
+    display_name: James
     email: theo.janssen@top-squad.nl
     web: https://top-squad.nl
     description: "Developer bij Top Squad"  
