@@ -29,8 +29,9 @@ docker run -p 9092:9092 apache/kafka:3.8.0
 ```bash
 docker ps
 ```
-Geeft:
 ![docker ps](/assets/images/kafka-rust/dockerps.png)
+
+Vervang $CONTAINER_ID hieronder door de id die je gevonden hebt.
 ```bash
 docker exec -it $CONTAINER_ID /bin/bash
 ```
