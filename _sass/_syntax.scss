@@ -1,9 +1,9 @@
-
-.highlight {
-	background: #fff;
-    border: 0;
-    padding: 0;
-    margin-bottom:1.7rem;
+pre.highlight {
+	background: #eee;
+	border-radius: 6px;
+    border: #aaa solid 1px;
+	margin-bottom: 0.7rem;
+	padding: 0.5rem;
 	.c { color: #999988; font-style: italic } /* Comment */
 	.err { color: #a61717; background-color: #e3d2d2 } /* Error */
 	.k { font-weight: bold } /* Keyword */
