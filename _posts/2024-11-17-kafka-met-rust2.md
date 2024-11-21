@@ -3,7 +3,7 @@ layout: post
 title: "Verder met kafka en avro"
 author: sander.hautvast
 categories: [rust, kafka, java, avro]
-image:  assets/images/kafka-rust/kafkaplus.png
+image:  assets/images/kafka-rust/kafkaplus.jpg
 alt:
 beforetoc: "seeds"
 featured: true

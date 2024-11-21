@@ -3,7 +3,7 @@ layout: post
 title: "Een kafka producer in Rust"
 author: sander.hautvast
 categories: [rust, kafka]
-image:  assets/images/kafka-rust/image.png
+image:  assets/images/kafka-rust/kafka.jpg
 alt:
 beforetoc: "seeds"
 featured: true
