@@ -17,8 +17,8 @@ Berichten in kafka zijn niets anders dan byte streams. Dus elk protocol voor ber
 In deze blog doe ik het volgende:
 1. kafka starten in docker compose, met een [KRaft](https://kafka.apache.org/documentation/#kraft) configuratie.
 2. een [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html) opzetten
-3. een java producer die berichten met objecten in [avro](https://avro.apache.org/) formaat verstuurt
-4. een rust consumer die deze berichten kan ontvangen
+3. een Java producer die berichten met objecten in [avro](https://avro.apache.org/) formaat verstuurt
+4. een Rust consumer die deze berichten kan ontvangen
 
 #### 1. Een KRaft kafka cluster in docker compose
 
@@ -181,9 +181,9 @@ public static void main(String[] args) {
 * de KafkaProducer communiceert met de schema registry
 * producer.send is async
 
-#### 4. een rust consumer die deze berichten kan ontvangen
+#### 4. een rRust consumer die deze berichten kan ontvangen
 
-Het rust ecosysteem is een stuk onrustiger dan dat van java. Dat maakte dat ik hier veel moeite had om een set libraries te vinden die goed met elkaar samenwerken. Het gaat dan om kafka, avro en de schema-registry. [3] gaf uiteindelijk de oplossing.
+Het Rust ecosysteem is een stuk onrustiger dan dat van Java. Dat maakte dat ik hier veel moeite had om een set libraries te vinden die goed met elkaar samenwerken. Het gaat dan om kafka, avro en de schema-registry. [3] gaf uiteindelijk de oplossing.
 
 ```toml
 apache-avro = "0.17.0"
@@ -198,10 +198,6 @@ tokio-macros = "2.4.0"
 ```
 
 De code is weer zo kort mogelijk en ontdaan van allerlei zaken die in het echt niet mogen ontbreken, zoals nettere error-handling, logging en wellicht een Sender, voor het draaien van de listener in een andere thread dan de uiteindelijke message-handler.
-
-Omdat deze consumer niet _ahead-of-time_ op de hoogte is van het Person type, dat we in java hadden, is de code niet symmetrisch. In plaats van een rust variant van de Person (is ook mogelijk), hebben we hier een generiek `Record` object (enum variant). De inhoud van een Record is een lijst tuples (key,value). Een HashMap was te luxueus, zeg maar.
-
-`group.id` is een manier om de load over verschillende consumers te verdelen, mocht dat nodig zijn. Elke consumer met een gelijke group.id zal maar een subset van de berichten krijgen om te verwerken.
 
 ```rust
 use apache_avro::types::Value;
@@ -238,11 +234,30 @@ async fn main() -> anyhow::Result<()> {
 
 ```
 
+Omdat deze consumer niet _ahead-of-time_ op de hoogte is van het Person type, dat we in java hadden, is de code niet symmetrisch. In plaats van een rust variant van de Person (is ook mogelijk), hebben we hier een generiek `Record` object (enum variant). De inhoud van een Record is een lijst tuples (key,value). Een HashMap was te luxueus, zeg maar.
+
+`group.id` is een manier om de load over verschillende consumers te verdelen, mocht dat nodig zijn. Elke consumer met een gelijke group.id zal maar een subset van de berichten krijgen om te verwerken.
+
+
+#### Pitfalls
+Ik heb diverse keren met de handen in het haar gezeten omdat rust en java net iets anders omgingen met het binaire avro formaat (de wirespec, niet het avsc bestand). Een gotcha is de manier waarop avro berichten over de lijn gaan:
+* byte 0: serialisatie type. Waarde \0 voor avro
+* bytes 1-4: versie van het person object.
+* bytes 5- het avro object
+
+Met deze informatie kun je de avro schema registry vragen om het schema voor het object dat zojuist binnenkwam.
+Zie [6]
+
+#### Conclusie
+Main takeaway is dat je Java en Rust applicaties naast elkaar kunt draaien en integreren met behulp van Kafka en Avro. Kraft vermindert de beheerslast van Kafka. Aan de rust kant is het altijd lastiger, vooral omdat het nog minder gangbaar is.
+
 met dank aan
-1. [https://medium.com/@katyagorshkova/docker-compose-for-running-kafka-in-kraft-mode-20c535c48b1a](https://medium.com/@katyagorshkova/docker-compose-for-running-kafka-in-kraft-mode-20c535c48b1a)
-2. [https://medium.com/slalom-technology/introduction-to-schema-registry-in-kafka-915ccf06b902](https://medium.com/slalom-technology/introduction-to-schema-registry-in-kafka-915ccf06b902)
-3. [https://medium.com/@omprakashsridharan/rust-multi-module-microservices-part-4-kafka-with-avro-f11204919da5](https://medium.com/@omprakashsridharan/rust-multi-module-microservices-part-4-kafka-with-avro-f11204919da5)
-4. [https://romanglushach.medium.com/the-evolution-of-kafka-architecture-from-zookeeper-to-kraft-f42d511ba242](https://romanglushach.medium.com/the-evolution-of-kafka-architecture-from-zookeeper-to-kraft-f42d511ba242)
-5. Jetbrains AI assistant
+1. [Docker Compose for Running Kafka in Kraft Mode](https://medium.com/@katyagorshkova/docker-compose-for-running-kafka-in-kraft-mode-20c535c48b1a)
+2. [Introduction to Schema Registry in Kafka](https://medium.com/slalom-technology/introduction-to-schema-registry-in-kafka-915ccf06b902)
+3. [Rust multi module microservices Part 4 — Kafka with Avro](https://medium.com/@omprakashsridharan/rust-multi-module-microservices-part-4-kafka-with-avro-f11204919da5)
+4. [The Evolution of Kafka Architecture: From ZooKeeper to KRaft](https://romanglushach.medium.com/the-evolution-of-kafka-architecture-from-zookeeper-to-kraft-f42d511ba242)
+5. [Kafka’s Shift from ZooKeeper to Kraft](https://www.baeldung.com/kafka-shift-from-zookeeper-to-kraft)
+6. [Confluent wire format](https://docs.confluent.io/platform/current/schema-registry/fundamentals/serdes-develop/index.html#wire-format)
+7. Jetbrains AI assistant
 
 <div style="text-align: right">∞</div>
