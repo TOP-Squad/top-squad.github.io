@@ -181,7 +181,7 @@ public static void main(String[] args) {
 * de KafkaProducer communiceert met de schema registry
 * producer.send is async
 
-#### 4. een rRust consumer die deze berichten kan ontvangen
+#### 4. een Rust consumer die deze berichten kan ontvangen
 
 Het Rust ecosysteem is een stuk onrustiger dan dat van Java. Dat maakte dat ik hier veel moeite had om een set libraries te vinden die goed met elkaar samenwerken. Het gaat dan om kafka, avro en de schema-registry. [3] gaf uiteindelijk de oplossing.
 
@@ -251,13 +251,30 @@ Zie [6]
 #### Conclusie
 Main takeaway is dat je Java en Rust applicaties naast elkaar kunt draaien en integreren met behulp van Kafka en Avro. Kraft vermindert de beheerslast van Kafka. Aan de rust kant is het altijd lastiger, vooral omdat het nog minder gangbaar is.
 
-met dank aan
+Meer lezen:
 1. [Docker Compose for Running Kafka in Kraft Mode](https://medium.com/@katyagorshkova/docker-compose-for-running-kafka-in-kraft-mode-20c535c48b1a)
 2. [Introduction to Schema Registry in Kafka](https://medium.com/slalom-technology/introduction-to-schema-registry-in-kafka-915ccf06b902)
 3. [Rust multi module microservices Part 4 — Kafka with Avro](https://medium.com/@omprakashsridharan/rust-multi-module-microservices-part-4-kafka-with-avro-f11204919da5)
 4. [The Evolution of Kafka Architecture: From ZooKeeper to KRaft](https://romanglushach.medium.com/the-evolution-of-kafka-architecture-from-zookeeper-to-kraft-f42d511ba242)
 5. [Kafka’s Shift from ZooKeeper to Kraft](https://www.baeldung.com/kafka-shift-from-zookeeper-to-kraft)
 6. [Confluent wire format](https://docs.confluent.io/platform/current/schema-registry/fundamentals/serdes-develop/index.html#wire-format)
-7. Jetbrains AI assistant
+
+
+##### _PS_. 
+Shout out naar AI assistant van Jetbrains. Ik zat verder te lezen/[luisteren](https://www.youtube.com/watch?v=vYp4LYbnnW8&t=1726s) over raft en dat protocol kent op één moment altijd maar één leader waarmee de clients móeten communiceren, terwijl Kafka de load verdeelt. Dus hoe zit dat??
+
+>It is said that kafka consumers and producers talk to the whole cluster to spread the load. But I was listening on a presentation about raft and there it's stated that clients can only talk to the single leader in a raft cluster. What are your thoughts about this?
+
+En dit was het antwoord van AI:
+
+- **Kafka’s Architecture**: Allows clients (producers and consumers) to communicate with different brokers, leveraging a leader for each partition to distribute the load.
+- **Raft’s Architecture**: Requires clients to communicate with the single leader, ensuring that all changes are coordinated through the central authority to maintain consistency across all nodes.
+
+en ik wilde dat niet zomaar aannemen, maar zocht en vond de bevestiging in deze blog:
+[Demystifying Kafka: A Guide to Kafka’s Architecture and Components](https://medium.com/@roopa.kushtagi/demystifying-kafka-a-guide-to-kafkas-architecture-and-components-f51a69ad0956)
+
+>Leader-Based Interaction: Each partition has one broker designated as the leader.
+
+...dus als ik het toch mis heb, weet je hoe het komt.
 
 <div style="text-align: right">∞</div>
