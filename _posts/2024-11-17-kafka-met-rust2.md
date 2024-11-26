@@ -177,7 +177,7 @@ public static void main(String[] args) {
 }
 ```
 
-* kafka producers en consumers praten met het hele cluster, in plaats van dat alles door dezelfde _leader/master_ gaat. Dit is de manier waarop kafka de load verdeelt.
+* kafka producers en consumers praten met het hele cluster, in plaats van dat alles door dezelfde _leader_ gaat. Dit is de manier waarop kafka de load verdeelt. Er is wel altijd één leader per partititie (by default heb je een partitie per topic). Dit is daarmee een variatie op het standaard raft protocol, waarbij alles via één leader gaat.
 * de KafkaProducer communiceert met de schema registry
 * producer.send is async
 
